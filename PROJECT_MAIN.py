@@ -281,7 +281,7 @@ df.drop(columns=['Month'], inplace=True)
 # Pie Chart
 bin_counts = df['Fatality (Grouping)'].value_counts()
 
-st.subheader("Groupings of Fatalities (Total, Partial Fatalities, and Total Survival) per aircrash")
+st.subheader("Groupings of Fatalities (Total, Partial Fatalities, and Total Survival) Per AirCrash")
 plt.figure(figsize=(6,6))
 plt.pie(
     bin_counts.values, 
@@ -290,7 +290,7 @@ plt.pie(
     autopct='%1.1f%%', 
     wedgeprops={'edgecolor': 'black'}
 )
-plt.title('AIR CRASHES FATALITY RATE')
+plt.title('AIR CRASHES FATALITY RATE PER AIR CRASH =')
 st.pyplot(plt)
 
 
