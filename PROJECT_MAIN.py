@@ -173,8 +173,7 @@ filters={
         "Decade":df["Decade"].unique(),
         "Season":df["Decade"].unique()
         }
-df.drop(columns=['Year'], inplace = True)
-df.drop(columns=['Month'], inplace = True)
+
 
         
 
@@ -307,3 +306,7 @@ chart = alt.Chart(heatmap).mark_rect().encode(
 )
 
 st.altair_chart(chart)
+
+
+df.drop(columns=['Year'], inplace = True)
+df.drop(columns=['Month'], inplace = True)
