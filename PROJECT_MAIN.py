@@ -266,6 +266,7 @@ st.altair_chart(chart)
 
 
 # chart for Aircrashes by Months 
+df['Month'] = pd.to_datetime(df['Date']).dt.month
 st.subheader("Aircrahses By Months")
 chart = alt.Chart(df).mark_bar().encode(
     x=alt.X('Month:N', sort='ascending', title='Month'),
@@ -273,7 +274,7 @@ chart = alt.Chart(df).mark_bar().encode(
     color=alt.value('orange')  # Optional: make bars orange
 ).properties(height=600)
 st.altair_chart(chart)
-
+df.drop(columns=['Month'], inplace=True)
 # pie chart for fatalities and shit 
 # Pie Chart
 bin_counts = df['Fatality (Grouping)'].value_counts()
