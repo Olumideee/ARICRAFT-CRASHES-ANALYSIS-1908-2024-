@@ -290,7 +290,7 @@ plt.pie(
     autopct='%1.1f%%', 
     wedgeprops={'edgecolor': 'black'}
 )
-plt.title('AIR CRASHES FATALITY RATE PER AIR CRASH =')
+plt.title('AIR CRASHES FATALITY RATE PER AIR CRASH ')
 st.pyplot(plt)
 
 
