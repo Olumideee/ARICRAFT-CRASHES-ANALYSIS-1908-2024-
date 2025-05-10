@@ -190,7 +190,7 @@ filtered_df= df.copy()
 for key,selected_values in selected_filters.items():
     if selected_values:
         filtered_df= filtered_df[filtered_df[key].isin(selected_values)]
-st.dataframe(filtered_df.head()) 
+st.dataframe(filtered_df, height=300, width=800)
 
 
 no_of_reported_cases = len(filtered_df)
