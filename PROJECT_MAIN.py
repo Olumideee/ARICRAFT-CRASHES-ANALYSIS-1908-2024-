@@ -196,8 +196,9 @@ no_of_reported_cases = len(filtered_df)
 total_deaths = filtered_df["Fatalities (air)"].sum()
 number_of_countries_affected = filtered_df["Country/Region"].nunique()
 number_of_people_aboard = filtered_df["Aboard"].sum()
+number_of_people_survived = filtered_df["Survivors"].sum()
 
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
     st.metric("Number of Reported Cases", no_of_reported_cases)
@@ -210,6 +211,8 @@ with col3:
 
 with col4:
     st.metric("Number of People Aboard", number_of_people_aboard)
+with col5:
+    st.metric("Number of People Survived", number_of_people_survived)
 
 #tables 
 #countries with the highest reported cases 
