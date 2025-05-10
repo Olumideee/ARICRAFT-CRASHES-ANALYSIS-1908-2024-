@@ -308,5 +308,3 @@ chart = alt.Chart(heatmap).mark_rect().encode(
 st.altair_chart(chart)
 
 
-df.drop(columns=['Year'], inplace = True)
-df.drop(columns=['Month'], inplace = True)
