@@ -215,26 +215,26 @@ with col4:
 #countries with the highest reported cases 
 st.subheader("Top 5 countries with the Highest Air crash recording")
 
-top_countries = (df['Country/Region'].value_counts().head(6).reset_index())
+top_countries = (df['Country/Region'].value_counts().head(12).reset_index())
 top_countries.columns = ['Country', 'Reported Cases']
-range = top_countries.iloc[1:7]
+range = top_countries.iloc[1:11]
 st.table(range)
 
 # aircraft manufacturer with the most aircrashes
 st.subheader("Aircraft Manufacturers with the most Recorded cases")
-top_aircraft_manufacturer = (df["Aircraft Manufacturer"].value_counts().head(5).reset_index())
+top_aircraft_manufacturer = (df["Aircraft Manufacturer"].value_counts().head(10).reset_index())
 top_aircraft_manufacturer.columns = ["Aircraft Manufacturer", "number of crashes from manufacturer"]
 st.table(top_aircraft_manufacturer)
 
 # operator with the most air crashes 
 st.subheader("Aircraft Operators with the most crashes")
-top_operator = (df.Operator.value_counts().head(5).reset_index())
+top_operator = (df.Operator.value_counts().head(10).reset_index())
 top_operator.columns = ["Operator", "Number of Crashes from operator"]
 st.table(top_operator)
 
 # Aircraft with th most aircrashes 
 st.subheader("Aircraft with the most air crashes")
-top_aircrashes = (df.Aircraft.value_counts().head(5).reset_index())
+top_aircrashes = (df.Aircraft.value_counts().head(10).reset_index())
 top_aircrashes.columns = ["Aircraft", "Number of crashes from Aircraft"]
 st.table(top_aircrashes)
 
