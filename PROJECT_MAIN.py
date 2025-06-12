@@ -277,21 +277,23 @@ chart = alt.Chart(df).mark_bar().encode(
 ).properties(height=600)
 st.altair_chart(chart)
 df.drop(columns=['Month'], inplace=True)
-# pie chart for fatalities and shit 
-# Pie Chart
-bin_counts = df['Fatality (Grouping)'].value_counts()
 
-st.subheader("Groupings of Fatalities (Total, Partial Fatalities, and Total Survival) Per AirCrash")
-plt.figure(figsize=(6,6))
-plt.pie(
-    bin_counts.values, 
-    labels=bin_counts.index,  
+
+# Pie Chart
+bin_counts = df['Fatality_Bin'].value_counts()
+
+fig, ax = plt.subplots(figsize=(6, 6))
+ax.pie(
+    bin_counts.values,
+    labels=bin_counts.index,
     colors=['red', 'lightgreen', 'blue'],
-    autopct='%1.1f%%', 
+    autopct='%1.1f%%',
     wedgeprops={'edgecolor': 'black'}
 )
-plt.title('AIR CRASHES FATALITY RATE PER AIR CRASH ')
-st.pyplot(plt)
+ax.set_title('AIR CRASHES FATALITY RATE')
+
+st.pyplot(fig)
+
 
 
 # Heat map for year and country 
