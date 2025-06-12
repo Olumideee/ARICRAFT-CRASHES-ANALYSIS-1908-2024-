@@ -207,7 +207,7 @@ with col2:
     st.metric("Total Fatalities", total_deaths)
 
 with col3:
-    st.metric("Countries Affected", number_of_countries_affected)
+    st.metric("Total Countries/Regions Affected", number_of_countries_affected)
 
 with col4:
     st.metric("Total Aboard", number_of_people_aboard)
@@ -216,7 +216,7 @@ with col5:
 
 #tables 
 #countries with the highest reported cases 
-st.subheader("Top 5 countries with the Highest Air crash recording")
+st.subheader("Top 5 Countries/Regions with the Highest Air crash recording")
 
 top_countries = (df['Country/Region'].value_counts().head(6).reset_index())
 top_countries.columns = ['Country', 'Reported Cases']
