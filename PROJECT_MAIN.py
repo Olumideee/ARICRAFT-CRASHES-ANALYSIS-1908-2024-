@@ -194,7 +194,7 @@ st.dataframe(filtered_df, height=300, width=1300)
 
 no_of_reported_cases = len(filtered_df)
 total_deaths = filtered_df["Fatalities (air)"].sum()
-number_of_countries/regions_affected == filtered_df["Country/Region"].nunique()
+number_of_countries_or_regions_affected = filtered_df["Country/Region"].nunique()
 number_of_people_aboard = filtered_df["Aboard"].sum()
 number_of_people_survived = filtered_df["Survivors"].sum()
 
