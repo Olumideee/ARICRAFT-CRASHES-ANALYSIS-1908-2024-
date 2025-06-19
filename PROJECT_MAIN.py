@@ -282,7 +282,7 @@ df.drop(columns=['Month'], inplace=True)
 
 
 # Pie Chart
-bin_counts = df['Fatality_Bin'].value_counts()
+bin_counts = df['Fatality (Grouping)'].value_counts()
 
 fig, ax = plt.subplots(figsize=(6, 6))
 ax.pie(
